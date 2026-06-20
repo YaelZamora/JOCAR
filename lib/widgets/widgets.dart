@@ -1,0 +1,9 @@
+export 'package:jocar_web/constants.dart';
+export 'package:jocar_web/widgets/navbar.dart';
+export 'package:jocar_web/widgets/mobile_drawer.dart';
+export 'package:jocar_web/widgets/hero_section.dart';
+export 'package:jocar_web/widgets/identity_section.dart';
+export 'package:jocar_web/widgets/services_section.dart';
+export 'package:jocar_web/widgets/cta_section.dart';
+export 'package:jocar_web/widgets/contact_section.dart';
+export 'package:jocar_web/widgets/footer_section.dart';
