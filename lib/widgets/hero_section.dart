@@ -88,9 +88,9 @@ class HeroSection extends StatelessWidget {
                           scale: 1.3,
                           child: Center(
                             child: Opacity(
-                              opacity: 0.2,
+                              opacity: 1,
                               child: Image.asset(
-                                'assets/logo.jpg',
+                                'assets/logo.png',
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -99,7 +99,7 @@ class HeroSection extends StatelessWidget {
                       ),
 
                       // Main Hero Text and Buttons
-                      Column(
+                      /*Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const SizedBox(height: 24),
@@ -184,7 +184,7 @@ class HeroSection extends StatelessWidget {
                           ),
                           const SizedBox(height: 80),
                         ],
-                      ),
+                      ),*/
                     ],
                   ),
                 ),
