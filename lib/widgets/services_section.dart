@@ -5,13 +5,8 @@ import 'package:jocar_web/widgets/amisi_logo.dart';
 
 class ServicesSection extends StatelessWidget {
   final bool isDesktop;
-  final VoidCallback onContactTap;
 
-  const ServicesSection({
-    super.key,
-    required this.isDesktop,
-    required this.onContactTap,
-  });
+  const ServicesSection({super.key, required this.isDesktop});
 
   @override
   Widget build(BuildContext context) {
@@ -100,7 +95,6 @@ class ServicesSection extends StatelessWidget {
                             title: 'Capital Humano',
                             description:
                                 'Desarrollo de habilidades y capacitación técnica de alto nivel.',
-                            onTap: onContactTap,
                           ),
                         ),
                         const SizedBox(width: 32),
@@ -112,7 +106,6 @@ class ServicesSection extends StatelessWidget {
                             title: 'Ingeniería',
                             description:
                                 'Mantenimiento industrial e innovación en maquinaria de precisión.',
-                            onTap: onContactTap,
                           ),
                         ),
                         const SizedBox(width: 32),
@@ -124,7 +117,6 @@ class ServicesSection extends StatelessWidget {
                             title: 'Tecnología e IA',
                             description:
                                 'Digitalización de procesos y aplicación de Inteligencia Artificial.',
-                            onTap: onContactTap,
                           ),
                         ),
                       ],
@@ -138,7 +130,6 @@ class ServicesSection extends StatelessWidget {
                           title: 'Capital Humano',
                           description:
                               'Desarrollo de habilidades y capacitación técnica de alto nivel.',
-                          onTap: onContactTap,
                         ),
                         const SizedBox(height: 32),
                         DivisionCard(
@@ -148,7 +139,6 @@ class ServicesSection extends StatelessWidget {
                           title: 'Ingeniería',
                           description:
                               'Mantenimiento industrial e innovación en maquinaria de precisión.',
-                          onTap: onContactTap,
                         ),
                         const SizedBox(height: 32),
                         DivisionCard(
@@ -158,7 +148,6 @@ class ServicesSection extends StatelessWidget {
                           title: 'Tecnología e IA',
                           description:
                               'Digitalización de procesos y aplicación de Inteligencia Artificial.',
-                          onTap: onContactTap,
                         ),
                       ],
                     ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:jocar_web/constants.dart';
 import 'package:jocar_web/widgets/faded_collage_image.dart';
 import 'package:jocar_web/widgets/geometric_clipper.dart';
@@ -11,15 +10,8 @@ import 'package:jocar_web/widgets/tech_grid_painter.dart';
 /// "Sistemas Integrales" tagline positioned in the center.
 class HeroSection extends StatelessWidget {
   final bool isDesktop;
-  final VoidCallback onSolucionesTap;
-  final VoidCallback onMisionTap;
 
-  const HeroSection({
-    super.key,
-    required this.isDesktop,
-    required this.onSolucionesTap,
-    required this.onMisionTap,
-  });
+  const HeroSection({super.key, required this.isDesktop});
 
   @override
   Widget build(BuildContext context) {
