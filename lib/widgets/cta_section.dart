@@ -48,7 +48,9 @@ class CTASection extends StatelessWidget {
                   Text(
                     'Únete a las empresas que ya están optimizando sus sistemas con JOCAR.',
                     textAlign: TextAlign.center,
-                    style: bodyLgStyle(color: Colors.white.withOpacity(0.8)),
+                    style: bodyLgStyle(
+                      color: Colors.white.withValues(alpha: 0.8),
+                    ),
                   ),
                   const SizedBox(height: 48),
                   CutCornerButton(

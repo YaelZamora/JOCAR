@@ -41,17 +41,17 @@ class Navbar extends StatelessWidget {
           duration: const Duration(milliseconds: 300),
           height: isScrolled ? 64.0 : 80.0,
           decoration: BoxDecoration(
-            color: colorSurface.withOpacity(0.9),
+            color: colorSurface.withValues(alpha: 0.9),
             border: Border(
               bottom: BorderSide(
-                color: colorPrimary.withOpacity(0.1),
+                color: colorPrimary.withValues(alpha: 0.1),
                 width: 1,
               ),
             ),
             boxShadow: isScrolled
                 ? [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.05),
+                      color: Colors.black.withValues(alpha: 0.05),
                       blurRadius: 10,
                       offset: const Offset(0, 4),
                     ),

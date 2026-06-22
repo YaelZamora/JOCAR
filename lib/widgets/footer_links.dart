@@ -5,11 +5,7 @@ class FooterLinks extends StatelessWidget {
   final String title;
   final List<String> links;
 
-  const FooterLinks({
-    super.key,
-    required this.title,
-    required this.links,
-  });
+  const FooterLinks({super.key, required this.title, required this.links});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +26,9 @@ class FooterLinks extends StatelessWidget {
                 cursor: SystemMouseCursors.click,
                 child: Text(
                   link,
-                  style: bodyMdStyle(color: Colors.white.withOpacity(0.8)),
+                  style: bodyMdStyle(
+                    color: Colors.white.withValues(alpha: 0.8),
+                  ),
                 ),
               ),
             ),

@@ -20,7 +20,7 @@ class IdentityCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: colorSurface,
         borderRadius: BorderRadius.circular(4),
-        border: Border.all(color: colorPrimary.withOpacity(0.1)),
+        border: Border.all(color: colorPrimary.withValues(alpha: 0.1)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

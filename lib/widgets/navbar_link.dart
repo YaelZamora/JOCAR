@@ -37,7 +37,7 @@ class _NavbarLinkState extends State<NavbarLink> {
                 color: widget.isActive
                     ? colorPrimary
                     : (_isHovered
-                          ? colorPrimary.withOpacity(0.4)
+                          ? colorPrimary.withValues(alpha: 0.4)
                           : Colors.transparent),
                 width: 2,
               ),

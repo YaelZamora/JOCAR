@@ -12,6 +12,7 @@ class FadedCollageImage extends StatelessWidget {
   final double opacity;
 
   const FadedCollageImage({
+    super.key,
     required this.assetPath,
     this.fadeTop = 0.0,
     this.fadeBottom = 0.0,

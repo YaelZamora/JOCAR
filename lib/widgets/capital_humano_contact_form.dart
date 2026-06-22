@@ -1,24 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:jocar_web/constants.dart';
-import 'package:jocar_web/widgets/cut_corner_button.dart';
 
-class ContactForm extends StatefulWidget {
-  const ContactForm({super.key});
+class CapitalHumanoContactForm extends StatefulWidget {
+  const CapitalHumanoContactForm({super.key});
 
   @override
-  State<ContactForm> createState() => _ContactFormState();
+  State<CapitalHumanoContactForm> createState() =>
+      _CapitalHumanoContactFormState();
 }
 
-class _ContactFormState extends State<ContactForm> {
+class _CapitalHumanoContactFormState extends State<CapitalHumanoContactForm> {
   final _formKey = GlobalKey<FormState>();
   final _nameController = TextEditingController();
-  final _companyController = TextEditingController();
+  final _emailController = TextEditingController();
   final _messageController = TextEditingController();
+  String _selectedArea = 'Desarrollo de Capital Humano';
+
+  final List<String> _areas = [
+    'Desarrollo de Capital Humano',
+    'Certificaciones ISO/CONOCER',
+    'Medio Ambiente',
+    'Ingeniería y Tecnología',
+  ];
 
   @override
   void dispose() {
     _nameController.dispose();
-    _companyController.dispose();
+    _emailController.dispose();
     _messageController.dispose();
     super.dispose();
   }
@@ -26,24 +34,27 @@ class _ContactFormState extends State<ContactForm> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(40),
       decoration: BoxDecoration(
-        color: colorSurface,
+        color: Colors.white,
         borderRadius: BorderRadius.circular(4),
-        border: Border.all(color: colorPrimary.withValues(alpha: 0.1)),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
-            blurRadius: 15,
-            offset: const Offset(0, 5),
-          ),
-        ],
+        border: Border.all(
+          color: colorOnSurfaceVariant.withValues(alpha: 0.1),
+          width: 1,
+        ),
       ),
+      padding: const EdgeInsets.all(40),
       child: Form(
         key: _formKey,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            Text(
+              'Fast Communication',
+              style: headlineMdStyle(color: colorPrimary),
+            ),
+            const SizedBox(height: 32),
+
+            // Nombre Completo
             TextFormField(
               controller: _nameController,
               style: bodyMdStyle(color: colorOnBackground),
@@ -51,7 +62,7 @@ class _ContactFormState extends State<ContactForm> {
                 labelText: 'NOMBRE COMPLETO',
                 labelStyle: labelSmStyle(color: colorPrimary),
                 floatingLabelBehavior: FloatingLabelBehavior.always,
-                hintText: 'Escribe tu nombre',
+                hintText: 'Escriba su nombre',
                 hintStyle: bodyMdStyle(
                   color: colorOnSurfaceVariant.withValues(alpha: 0.4),
                 ),
@@ -64,20 +75,23 @@ class _ContactFormState extends State<ContactForm> {
               ),
               validator: (value) {
                 if (value == null || value.trim().isEmpty) {
-                  return 'Por favor ingresa tu nombre';
+                  return 'Por favor escribe tu nombre completo';
                 }
                 return null;
               },
             ),
             const SizedBox(height: 32),
+
+            // Email Corporativo
             TextFormField(
-              controller: _companyController,
+              controller: _emailController,
               style: bodyMdStyle(color: colorOnBackground),
+              keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
-                labelText: 'EMPRESA',
+                labelText: 'EMAIL CORPORATIVO',
                 labelStyle: labelSmStyle(color: colorPrimary),
                 floatingLabelBehavior: FloatingLabelBehavior.always,
-                hintText: 'Nombre de tu organización',
+                hintText: 'nombre@empresa.com',
                 hintStyle: bodyMdStyle(
                   color: colorOnSurfaceVariant.withValues(alpha: 0.4),
                 ),
@@ -90,12 +104,47 @@ class _ContactFormState extends State<ContactForm> {
               ),
               validator: (value) {
                 if (value == null || value.trim().isEmpty) {
-                  return 'Por favor ingresa el nombre de tu empresa';
+                  return 'Por favor ingresa un correo electrónico';
+                }
+                if (!RegExp(
+                  r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
+                ).hasMatch(value)) {
+                  return 'Por favor ingresa un correo válido';
                 }
                 return null;
               },
             ),
             const SizedBox(height: 32),
+
+            // Área de Interés
+            DropdownButtonFormField<String>(
+              initialValue: _selectedArea,
+              style: bodyMdStyle(color: colorOnBackground),
+              decoration: InputDecoration(
+                labelText: 'ÁREA DE INTERÉS',
+                labelStyle: labelSmStyle(color: colorPrimary),
+                floatingLabelBehavior: FloatingLabelBehavior.always,
+                enabledBorder: const UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0x33003298), width: 2),
+                ),
+                focusedBorder: const UnderlineInputBorder(
+                  borderSide: BorderSide(color: colorSecondary, width: 2),
+                ),
+              ),
+              items: _areas.map((String area) {
+                return DropdownMenuItem<String>(value: area, child: Text(area));
+              }).toList(),
+              onChanged: (newValue) {
+                if (newValue != null) {
+                  setState(() {
+                    _selectedArea = newValue;
+                  });
+                }
+              },
+            ),
+            const SizedBox(height: 32),
+
+            // Mensaje
             TextFormField(
               controller: _messageController,
               maxLines: 4,
@@ -104,7 +153,7 @@ class _ContactFormState extends State<ContactForm> {
                 labelText: 'MENSAJE',
                 labelStyle: labelSmStyle(color: colorPrimary),
                 floatingLabelBehavior: FloatingLabelBehavior.always,
-                hintText: '¿Cómo podemos apoyarte?',
+                hintText: 'Cuéntenos sobre sus necesidades...',
                 hintStyle: bodyMdStyle(
                   color: colorOnSurfaceVariant.withValues(alpha: 0.4),
                 ),
@@ -117,14 +166,25 @@ class _ContactFormState extends State<ContactForm> {
               ),
               validator: (value) {
                 if (value == null || value.trim().isEmpty) {
-                  return 'Por favor escribe tu mensaje';
+                  return 'Por favor redacta tu mensaje';
                 }
                 return null;
               },
             ),
             const SizedBox(height: 40),
-            CutCornerButton(
-              text: 'ENVIAR MENSAJE',
+
+            // Submit Button
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: colorPrimary,
+                elevation: 4,
+                padding: const EdgeInsets.symmetric(vertical: 20),
+                shape: const BeveledRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    bottomRight: Radius.circular(12),
+                  ),
+                ),
+              ),
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
                   // Simulate submission success
@@ -132,7 +192,7 @@ class _ContactFormState extends State<ContactForm> {
                     SnackBar(
                       backgroundColor: colorSecondary,
                       content: Text(
-                        '¡Mensaje enviado con éxito! Nos pondremos en contacto contigo.',
+                        '¡Solicitud enviada con éxito! Nos comunicaremos a la brevedad.',
                         style: bodyMdStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -141,11 +201,19 @@ class _ContactFormState extends State<ContactForm> {
                     ),
                   );
                   _nameController.clear();
-                  _companyController.clear();
+                  _emailController.clear();
                   _messageController.clear();
+                  setState(() {
+                    _selectedArea = 'Desarrollo de Capital Humano';
+                  });
                 }
               },
-              verticalPadding: 20,
+              child: Text(
+                'Enviar Solicitud',
+                style: labelSmStyle(
+                  color: Colors.white,
+                ).copyWith(fontWeight: FontWeight.bold),
+              ),
             ),
           ],
         ),

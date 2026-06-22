@@ -6,10 +6,7 @@ import 'package:jocar_web/widgets/footer_socials.dart';
 class FooterSection extends StatelessWidget {
   final bool isDesktop;
 
-  const FooterSection({
-    super.key,
-    required this.isDesktop,
-  });
+  const FooterSection({super.key, required this.isDesktop});
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +16,7 @@ class FooterSection extends StatelessWidget {
         children: [
           Container(
             constraints: const BoxConstraints(maxWidth: 1280),
-            padding: const EdgeInsets.symmetric(
-              horizontal: 24.0,
-              vertical: 80,
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 80),
             child: isDesktop
                 ? Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -43,7 +37,7 @@ class FooterSection extends StatelessWidget {
                             Text(
                               'Pasión por la excelencia en sistemas integrales desde 2010.',
                               style: bodyMdStyle(
-                                color: Colors.white.withOpacity(0.7),
+                                color: Colors.white.withValues(alpha: 0.7),
                               ),
                             ),
                           ],
@@ -88,7 +82,7 @@ class FooterSection extends StatelessWidget {
                       Text(
                         'Pasión por la excelencia en sistemas integrales desde 2010.',
                         style: bodyMdStyle(
-                          color: Colors.white.withOpacity(0.7),
+                          color: Colors.white.withValues(alpha: 0.7),
                         ),
                       ),
                       const SizedBox(height: 48),
@@ -116,7 +110,7 @@ class FooterSection extends StatelessWidget {
           ),
 
           // Divider
-          Container(height: 1, color: Colors.white.withOpacity(0.1)),
+          Container(height: 1, color: Colors.white.withValues(alpha: 0.1)),
 
           // Sub-Footer copyright
           Container(
@@ -133,7 +127,7 @@ class FooterSection extends StatelessWidget {
                         child: Text(
                           '© 2024 JOCAR Sistemas Integrales. Todos los derechos reservados.',
                           style: labelSmStyle(
-                            color: Colors.white.withOpacity(0.6),
+                            color: Colors.white.withValues(alpha: 0.6),
                           ),
                         ),
                       ),
@@ -141,14 +135,14 @@ class FooterSection extends StatelessWidget {
                         children: [
                           Icon(
                             Icons.public,
-                            color: Colors.white.withOpacity(0.6),
+                            color: Colors.white.withValues(alpha: 0.6),
                             size: 16,
                           ),
                           const SizedBox(width: 6),
                           Text(
                             'Aguascalientes, MX',
                             style: labelSmStyle(
-                              color: Colors.white.withOpacity(0.6),
+                              color: Colors.white.withValues(alpha: 0.6),
                             ),
                           ),
                         ],
@@ -161,7 +155,7 @@ class FooterSection extends StatelessWidget {
                         '© 2024 JOCAR Sistemas Integrales. Todos los derechos reservados.',
                         textAlign: TextAlign.center,
                         style: labelSmStyle(
-                          color: Colors.white.withOpacity(0.6),
+                          color: Colors.white.withValues(alpha: 0.6),
                         ),
                       ),
                       const SizedBox(height: 16),
@@ -170,14 +164,14 @@ class FooterSection extends StatelessWidget {
                         children: [
                           Icon(
                             Icons.public,
-                            color: Colors.white.withOpacity(0.6),
+                            color: Colors.white.withValues(alpha: 0.6),
                             size: 16,
                           ),
                           const SizedBox(width: 6),
                           Text(
                             'Aguascalientes, MX',
                             style: labelSmStyle(
-                              color: Colors.white.withOpacity(0.6),
+                              color: Colors.white.withValues(alpha: 0.6),
                             ),
                           ),
                         ],

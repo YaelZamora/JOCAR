@@ -25,7 +25,7 @@ class ValuesBentoCard extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
-          Container(height: 1, color: Colors.white.withOpacity(0.2)),
+          Container(height: 1, color: Colors.white.withValues(alpha: 0.2)),
           const SizedBox(height: 24),
           Column(
             children: [

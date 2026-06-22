@@ -41,14 +41,14 @@ class _DivisionCardState extends State<DivisionCard> {
           boxShadow: _isHovered
               ? [
                   BoxShadow(
-                    color: colorSecondaryContainer.withOpacity(0.3),
+                    color: colorSecondaryContainer.withValues(alpha: 0.3),
                     blurRadius: 15,
                     spreadRadius: 2,
                   ),
                 ]
               : [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.05),
+                    color: Colors.black.withValues(alpha: 0.05),
                     blurRadius: 10,
                     offset: const Offset(0, 4),
                   ),
@@ -90,10 +90,13 @@ class _DivisionCardState extends State<DivisionCard> {
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: _isHovered
-                          ? [Colors.transparent, colorPrimary.withOpacity(0.85)]
+                          ? [
+                              Colors.transparent,
+                              colorPrimary.withValues(alpha: 0.85),
+                            ]
                           : [
-                              Colors.white.withOpacity(0.4),
-                              Colors.white.withOpacity(0.9),
+                              Colors.white.withValues(alpha: 0.4),
+                              Colors.white.withValues(alpha: 0.9),
                             ],
                     ),
                   ),
@@ -113,8 +116,8 @@ class _DivisionCardState extends State<DivisionCard> {
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         color: _isHovered
-                            ? Colors.white.withOpacity(0.2)
-                            : colorSecondaryContainer.withOpacity(0.2),
+                            ? Colors.white.withValues(alpha: 0.2)
+                            : colorSecondaryContainer.withValues(alpha: 0.2),
                         borderRadius: BorderRadius.circular(4),
                       ),
                       child: Icon(
@@ -140,7 +143,7 @@ class _DivisionCardState extends State<DivisionCard> {
                       widget.description,
                       style: bodyMdStyle(
                         color: _isHovered
-                            ? Colors.white.withOpacity(0.9)
+                            ? Colors.white.withValues(alpha: 0.9)
                             : colorOnSurfaceVariant,
                       ),
                     ),

@@ -34,7 +34,7 @@ class FooterSocials extends StatelessWidget {
           width: 44,
           height: 44,
           decoration: BoxDecoration(
-            border: Border.all(color: Colors.white.withOpacity(0.2)),
+            border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
             borderRadius: BorderRadius.circular(4),
           ),
           child: Icon(icon, color: Colors.white, size: 20),

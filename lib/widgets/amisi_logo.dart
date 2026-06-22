@@ -11,10 +11,12 @@ class AmisiLogo extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(4),
-        border: Border.all(color: colorSecondaryContainer.withOpacity(0.3)),
+        border: Border.all(
+          color: colorSecondaryContainer.withValues(alpha: 0.3),
+        ),
         boxShadow: [
           BoxShadow(
-            color: colorSecondaryContainer.withOpacity(0.15),
+            color: colorSecondaryContainer.withValues(alpha: 0.15),
             blurRadius: 15,
             spreadRadius: 1,
           ),

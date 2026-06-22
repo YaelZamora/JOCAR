@@ -56,7 +56,7 @@ class CutCornerButton extends StatelessWidget {
         elevation: (isSecondaryBorder || isSecondaryContainer) ? 0 : 4,
         shadowColor: isSecondaryBorder
             ? Colors.transparent
-            : colorPrimary.withOpacity(0.2),
+            : colorPrimary.withValues(alpha: 0.2),
         padding: EdgeInsets.symmetric(
           vertical: verticalPadding ?? 16,
           horizontal: horizontalPadding ?? 24,
