@@ -32,5 +32,7 @@ export 'package:jocar_web/widgets/tecnologia_ia_contact_section.dart';
 export 'package:jocar_web/widgets/tecnologia_ia_software_card.dart';
 export 'package:jocar_web/widgets/tecnologia_ia_mobile_card.dart';
 export 'package:jocar_web/widgets/tecnologia_ia_platforms_card.dart';
+export 'package:jocar_web/widgets/tech_network_painter.dart';
+
 
 
