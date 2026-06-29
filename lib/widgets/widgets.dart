@@ -26,5 +26,11 @@ export 'package:jocar_web/widgets/ingenieria_services_section.dart';
 export 'package:jocar_web/widgets/ingenieria_compromiso_section.dart';
 export 'package:jocar_web/widgets/corner_triangle_painter.dart';
 export 'package:jocar_web/widgets/ingenieria_service_card.dart';
+export 'package:jocar_web/widgets/tecnologia_ia_hero_section.dart';
+export 'package:jocar_web/widgets/tecnologia_ia_services_section.dart';
+export 'package:jocar_web/widgets/tecnologia_ia_contact_section.dart';
+export 'package:jocar_web/widgets/tecnologia_ia_software_card.dart';
+export 'package:jocar_web/widgets/tecnologia_ia_mobile_card.dart';
+export 'package:jocar_web/widgets/tecnologia_ia_platforms_card.dart';
 
 
