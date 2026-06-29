@@ -26,6 +26,6 @@ jobs:
         with:
           folder: build/web # La carpeta que genera Flutter
           # ⚠️ CAMBIA ESTO: Pon tu usuario de GitHub y el nombre del repo destino de la Web
-          repository-name: YaelZamora/JOCAR
+          repository-name: YaelZamora/jocar-web
           branch: main # O la rama donde almacenes tu web (usualmente main o gh-pages)
           token: ${{ secrets.ACCESS_TOKEN_GITHUB }} # Aquí lee el secreto que guardamos en el Paso 2
