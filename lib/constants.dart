@@ -103,3 +103,77 @@ TextStyle labelSmStyle({
     color: color,
   );
 }
+
+final List<Map<String, dynamic>> services = [
+  {
+    'title': 'Soldadura y Estructuras',
+    'icon': Icons.precision_manufacturing,
+    'items': [
+      'Fabricación de mezzanine',
+      'Modificación de estructuras',
+      'Fabricación de mesas de trabajo',
+      'Reparación de mobiliario',
+      'Fabricación de puertas',
+      'Estructuras para polipastos',
+      'Soldadura inoxidable',
+    ],
+  },
+  {
+    'title': 'Electricidad y Automatización',
+    'icon': Icons.electrical_services,
+    'items': [
+      'Media y baja tensión',
+      'Mantenimiento centros de carga',
+      'Instalaciones para puesta en marcha',
+      'Instalación de luminarias',
+      'Reparación e identificación de cortos',
+      'Balanceo de cargas',
+      'Automatización y Termografía',
+    ],
+  },
+  {
+    'title': 'Carpintería y Mobiliario',
+    'icon': Icons.carpenter,
+    'items': [
+      'Fabricación y reparación de mobiliario',
+      'Puertas y fachadas de madera',
+      'Escaleras y pisos especializados',
+      'Trabajo con madera sólida y triplay',
+      'Melamina y aglomerados',
+      'Acabados de alta resistencia',
+    ],
+  },
+  {
+    'title': 'Vidrio y Aluminio',
+    'icon': Icons.grid_view,
+    'items': [
+      'Mantenimiento de cancelería',
+      'Ventanas y fachadas integrales',
+      'Cambio de chapas y herrajes',
+      'Sistemas de seguridad en vidrio',
+      'Estructuras de aluminio anodizado',
+    ],
+  },
+  {
+    'title': 'Climatización y Extracción',
+    'icon': Icons.ac_unit,
+    'items': [
+      'Aires acondicionados industriales',
+      'Sistemas de extracción de aire',
+      'Chillers y torres de enfriamiento',
+      'Ductería y aislamiento térmico',
+      'Mantenimiento preventivo',
+    ],
+  },
+  {
+    'title': 'Mantenimientos Generales',
+    'icon': Icons.engineering,
+    'items': [
+      'Cortinas de andenes y rampas',
+      'Calderas y sistemas de vapor',
+      'Portones industriales y automatización',
+      'Calentadores y bombas',
+      'Sistemas de riego y techumbres',
+    ],
+  },
+];

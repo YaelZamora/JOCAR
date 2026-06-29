@@ -19,3 +19,12 @@ export 'package:jocar_web/widgets/capital_humano_hero_section.dart';
 export 'package:jocar_web/widgets/capital_humano_services_section.dart';
 export 'package:jocar_web/widgets/capital_humano_environmental_section.dart';
 export 'package:jocar_web/widgets/capital_humano_contact_section.dart';
+export 'package:jocar_web/widgets/ingenieria_contact_form.dart';
+export 'package:jocar_web/widgets/ingenieria_contact_section.dart';
+export 'package:jocar_web/widgets/ingenieria_hero_section.dart';
+export 'package:jocar_web/widgets/ingenieria_services_section.dart';
+export 'package:jocar_web/widgets/ingenieria_compromiso_section.dart';
+export 'package:jocar_web/widgets/corner_triangle_painter.dart';
+export 'package:jocar_web/widgets/ingenieria_service_card.dart';
+
+
