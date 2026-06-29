@@ -19,7 +19,7 @@ jobs:
       - name: Build Web
         run: |
           flutter pub get
-          flutter build web --release --base-href "/${{ github.event.repository.name }}/"
+          flutter build web --release --base-href "/jocar-web/"
 
       - name: Deploy to External Repo
         uses: JamesIves/github-pages-deploy-action@v4
